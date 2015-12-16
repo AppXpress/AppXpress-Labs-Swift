@@ -1,0 +1,39 @@
+<!-- question section -->
+<div class="newpoll-sections">
+    <div class="section-heading swift-project-newpoll-section-header">{{'QUESTION' | translate}}</div>
+    <div class="row">
+        <div class="col">
+            <label class="item item-input text">
+                <textarea placeholder="Question" rows="1" ng-model="poll.questions[0].questionText" ng-Required="true"></textarea>
+            </label>
+        </div>
+    </div>
+</div>
+<!-- answer section -->
+<div class="newpoll-sections">
+    <div class="swift-project-table-layout swift-project-newpoll-section-header">
+        <div class="swift-project-table-cell ">{{'ANSWER' | translate}}</div>
+        <div class="swift-project-table-cell">
+            <a href="#" class="mfb-component__button--main swift-project-answer-add-button " ng-click="addMoreAnswers()">
+                <i class="mfb-component__main-icon--resting ion-plus-round swift-project-breadcrumb-button-icon swift-project-new-poll-icon-small"></i>
+            </a>
+        </div>
+    </div>
+    <div class="swift-project-table-layout swift-project-newpoll-answers" ng-repeat="answer in poll.questions[0].answers">
+        <div class="swift-project-table-cell">
+            <label class="item item-input">
+                <input class="swift-project-answer-feild" type="text" placeholder="Answer" ng-model="answer.txtValue">
+            </label>
+        </div>
+        <div class="swift-project-table-cell">
+            <a href="#" class="mfb-component__button--main swift-project-answer-remove-button" ng-click="removeAnswer(answer)">
+                <i class="mfb-component__main-icon--resting ion-minus-round swift-project-breadcrumb-button-icon swift-project-new-poll-icon-small"></i>
+            </a>
+        </div>
+    </div>
+    <div class="swift-project-newpoll-section-header">
+        <label class="item-input swift-project-item-input">
+            <span class="input-label swift-project-newpoll-section-header ">Expires on</span>
+            <input class="swift-project-date-feild" type="date" ng-model="poll.endDate">
+        </label>
+    </div>

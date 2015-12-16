@@ -1,0 +1,145 @@
+<!-- DOCTYPE html -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <!-- compiled css output -->
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+    <link href="css/mfb.css" rel="stylesheet">
+    <!--  <link href="lib/angular-material/angular-material.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/tabSlideBox.css" rel="stylesheet"> -->
+    <link href="lib/angular-chart.js/dist/angular-chart.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <!-- Compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="lib/materialize/css/materialize.css">-->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- <script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js"></script>-->
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="lib/materialize/js/materialize.min.js"></script>-->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- <script src="lib/ionic/js/angular/angular-resource.js"></script>-->
+    <!-- loading angular base64 -->
+    <!-- <script src="lib/ionic/js/angular/angular-base64.js"></script>-->
+    <!-- Localisation (Static file translation) -->
+    <script type='text/javascript' src='lib/angular/angular.min.js'></script>
+    <script type='text/javascript' src='lib/d3/d3.min.js'></script>
+    <script type='text/javascript' src='lib/angular-charts/dist/angular-charts.min.js'></script>
+    <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <!--<script src="lib/angular-utf8-base64/angular-utf8-base64.js"></script>-->
+    <!-- angular material -->
+    <!--<script src="lib/angular-material/angular-material.js"></script>-->
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <!-- for charts -->
+    <script src="lib/Chart.js/Chart.min.js"></script>
+    <script src="lib/angular-chart.js/dist/angular-chart.js"></script>
+    <!-- for csv file upload -->
+    <script src="lib/ng-csv/build/ng-csv.js"></script>
+    
+    <script src="lib/angular-utf8-base64/angular-utf8-base64.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="app/app.modules.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/utils/utils.js"></script>
+    <script src="app/common/services/httpService.js"></script>
+    <script src="app/common/services/localStorageService.js"></script>
+    <script src="app/common/services/authenticationService.js"></script>
+    <script src="app/common/services/platformService.js"></script>
+    <script src="app/common/services/observer.js"></script>
+    <script src="app/common/services/answersService.js"></script>
+    <script src="app/common/services/pollService.js"></script>
+    <script src="app/common/services/questionsService.js"></script>
+    <script src="app/common/services/userService.js"></script>
+    <script src="app/common/services/pollDataStoreService.js"></script>
+    <script src="app/common/services/userInterface/loadingService.js"></script>
+    <!-- ui services -->
+    <script src="app/common/services/userInterface/popupService.js"></script>
+    <script src="app/common/services/userInterface/appThemeColorService.js"></script>
+    <script src="app/common/services/userInterface/breadcrumbSettings.js"></script>
+    <script src="app/common/services/userInterface/newpollsBreadcrumbService.js"></script>
+    <script src="app/common/directives/newpollSlider.directive.js"></script>
+    <!--<script src="app/common/services/userInterface/statisticsBreadcrumbService.js"></script>
+    
+    <script src="app/common/services/userInterface/appAnimationService.js"></script>
+    <script src="app/common/services/userInterface/plottingStatisticsService.js"></script>
+    <script src="app/common/services/userInterface/dateService.js"></script>
+    
+    -->
+    <!-- ui directives -->
+    <!--<script src="app/common/directives/chart.directive.js"></script>
+    <script src="app/common/directives/timer.directive.js"></script>
+    <script src="app/common/directives/cardview.directive.js"></script>
+    <script src="app/common/directives/graphSlider.directive.js"></script>
+    <script src="app/common/directives/clickEvent.directive.js"></script>-->
+    <!-- ui controllers -->
+    <script src="app/common/components/login/login.route.js"></script>
+    <script src="app/common/components/login/login.controller.js"></script>
+    <script src="app/components/home/home.route.js"></script>
+    <script src="app/components/home/controller.mypolls.js"></script>
+    <script src="app/components/home/controller.myresponse.js"></script>
+    <script src="app/components/home/statistics/controller.statistics.js"></script>
+    <script src="app/components/home/statistics/controller.statDetail.js"></script>
+
+    <script src="app/components/core/controller.core.js"></script>
+    <script src="app/components/newPolls/newPolls.route.js"></script>
+    <script src="app/components/newPolls/newPolls.controller.js"></script>
+
+    <!--<script src="app/components/home/home.answered.controller.js"></script>
+    <script src="app/components/home/home.missed.controller.js"></script>
+    <script src="app/components/home/home.mypolls.controller.js"></script>
+    <script src="app/components/home/home.mypolls.statistics.controller.js"></script>
+    <script src="app/components/home/answerdUserDetail.controller.js"></script>
+    <script src="app/components/home/home.pending.controller.js"></script>
+    <script src="app/components/sharedPolls/sharedPolls.route.js"></script>
+    <script src="app/components/sharedPolls/sharedPolls.controller.js"></script>
+    <script src="app/components/settings/settings.route.js"></script>
+    <script src="app/components/settings/settings.controller.js"></script>
+    <script src="app/utils/moment.js"></script>
+    <script src="app/utils/moment-duration-format.js"></script>
+    <script src="app/common/services/pushService.js"></script>
+    <script src="app/common/directives/tabSlideBox.js"></script>
+    -->
+    <script src="app/app.js"></script>
+    <!--<script src="js/controllers.js"></script>
+    <script src="js/services.js"></script> -->
+    <script src="js/menu.js"></script>
+    <script src="js/directives.js"></script>
+</head>
+
+<body ng-app="swift" ng-controller="coreController">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="{{header_color}}">
+        <!-- <ion-nav-back-button></ion-nav-back-button> -->
+        <!--  <ion-nav-buttons side="left" class="">
+            <i class="mdi-social-notifications-on blink notification-icon" ui-sref="sharedpolls"></i>
+        </ion-nav-buttons> -->
+        <!-- <ion-nav-buttons side="right">
+            <i class="mdi-social-notifications-on blink notification-icon" ui-sref="sharedpolls"></i>
+            <i class="mdi-navigation-more-vert more-icon" ui-sref="settings"></i>
+        </ion-nav-buttons> -->
+    </ion-nav-bar>
+    <!--  <a id="add-poll-btn" class="btn-floating btn-large waves-effect waves-light dark-pink add-poll-btn" ui-sref="newpolls">
+        <i class="material-icons mdi-content-add "></i></a> -->
+    <!-- <div ng-sparkline></div> -->
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+    <menu menulist="menulist" side="left" direct="closeSideMenu(state)" logout="logout()" class="{{header_color}}"></menu>
+    <!-- floating button -->
+</body>
+
+</html>

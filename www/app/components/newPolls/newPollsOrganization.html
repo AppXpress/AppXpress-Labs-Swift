@@ -1,0 +1,42 @@
+<div class="swift-project-org-type ">
+    <label class="item item-input item-select org-list">
+        <div class="input-label">
+            Share with
+        </div>
+        <select ng-model="orgType" ng-change="changePartyList(orgType)">
+            <option value="All">All</option>
+            <option value="Buyer">Buyer</option>
+            <option value="Seller" selected>Seller</option>
+            <option value="Factory">Factory</option>
+            <option value="Other">Other</option>
+        </select>
+    </label>
+</div>
+<div class="switch">
+ <li class="item item-checkbox swift-project-party-item">
+     <label class="checkbox" for="checkAll">
+       <input name="org" type="checkbox" id="selectAll" ng-model="party.selected" ng-click="selectAll($event)">
+     </label>
+     Select All
+  </li>
+    <!-- <input type="checkbox" id="checkAll" name="org" ng-click="selectAll($event)" />
+    <label for="checkAll">Select All</label> -->
+</div>
+<ul class="list swift-project-party-list" ng-repeat="party in partyList">
+
+  <li class="item item-checkbox swift-project-party-item">
+     <label class="checkbox" for="{{party.partyRoleCode}}_{{party.memberId}}">
+       <input name="org" class="community-checkbox" type="checkbox" id="{{party.partyRoleCode}}_{{party.memberId}}" ng-model="party.selected">
+     </label>
+     {{party.name}} - [{{party.memberId}} - {{party.partyRoleCode}}]
+  </li>
+
+</ul>
+<!-- <ion-list class="organization-list" ng-repeat="party in partyList">
+    <ion-item>
+        <div class="switch">
+            <input type="checkbox" name="org" id="{{party.partyRoleCode}}_{{party.memberId}}" ng-model="party.selected" />
+            <label for="{{party.partyRoleCode}}_{{party.memberId}}">{{party.name}} - [{{party.memberId}} - {{party.partyRoleCode}}]</label>
+        </div>
+    </ion-item>
+</ion-list> -->

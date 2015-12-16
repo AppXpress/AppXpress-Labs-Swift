@@ -1,0 +1,15 @@
+<div class="swift-project-table-layout">
+    <div class="swift-project-table-cell swift-project-total-answer-label" style="text-align: left;">Responses<div class="swift-project-total-answer-count">{{poll.questions[0].totalNumofAnswers}}</div></div>
+    <div class="swift-project-table-cell swift-project-total-answer-label"> Expires on <div class="swift-project-poll-expiry-date">{{poll.endDate}}</div></div>
+</div>
+<div data-ac-chart="'pie'" data-ac-data="poll.questions[0].answerDataList" data-ac-config="config" class="swift-project-main-chart ">
+</div>
+<div>
+    <ul class="list">
+        <li class="item swift-project-table-layout" ng-repeat="legend in poll.questions[0].answerDataList.data" ng-click="goToAnswerDetail(poll,$index)">
+            <div class="swift-project-color-circle swift-project-table-cell" style="background-color:{{colors[$index]}}"></div>
+            <div class="swift-project-table-cell swift-project-chart-legend"><span class="swift-project-answer-count">{{legend.y[0]}}</span>
+                <br/>{{legend.x}}</div>
+        </li>
+    </ul>
+</div>

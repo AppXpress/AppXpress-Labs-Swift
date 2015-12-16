@@ -1,0 +1,25 @@
+<ion-view class="overlay" hide-nav-bar="true">
+    <div id="modal" class="modal card-model">
+        <a class="btn-floating btn-small waves-effect waves-light gray close-btn" ng-click="closePopup()"><i class="mdi-navigation-close"></i></a>
+        <div id="model-header" class="model-header model-header-background-orange">
+            <div class="question">
+                {{poll.questions[0].questionText}}
+            </div>
+            <div class="closing-date">
+                <div class="colum1">closed on</div>
+                <div class="colum2">{{poll.endDate}}</div>
+            </div>
+            <a class="btn-floating btn-large waves-effect waves-light green answer-btn" ng-click="answerPoll()"><i class="mdi-action-done"></i></a>
+        </div>
+        <div id="overlay-content-newpoll" class="overlay-content">
+            <ion-content>
+                <ion-list class="organization-list" ng-repeat="answer in poll.questions[0].answers">
+                    <ion-item>
+                        <input type="checkbox" id="{{answer.uid}}" ng-model="answer.selected" ng-click="answerOnClick({{answer.uid}})" type="{{type}}" />
+                        <label for="{{answer.uid}}">{{answer.txtValue}}</label>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </div>
+    </div>
+</ion-view>

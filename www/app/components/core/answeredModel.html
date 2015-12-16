@@ -1,0 +1,30 @@
+<!-- <div class="modal answerd-model">
+    <ion-content has-header="true" padding="true" class="answerd-model-content">
+        <div id="model-header" class="model-header model-header-background-blue ">
+            <div class="question">{{poll.questions[0].questionText}}</div>
+            <div class="closing-date">
+                <div class="colum1">Closed on</div>
+                <div class="colum2">{{poll.endDate}}</div>
+            </div>
+        </div>
+        <ion-list>
+            <ion-item class="{{answer_color}}"><i class="mdi-image-grain"></i>&nbsp; &nbsp; &nbsp;{{poll.questions[0].response[0].txtValue}}</ion-item>
+        </ion-list>
+    </ion-content>
+</div>
+ -->
+
+ <ion-modal-view>
+    <ion-header-bar class="bar bar-header {{header_color}}">
+        <h1 class="title swift-project-header-question"></h1>
+        <button class="button button-clear button-primary" ng-click="modal_answered.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="swift-project-header-bar swift-project-header-question {{breadcrumb_color}}">{{poll.questions[0].questionText}}
+        </div>
+        <div class="list">
+            <ion-checkbox id="{{answer.uid}}"  ng-checked="(answer.txtValue === poll.questions[0].response[0].txtValue) ? true: false" ng-disabled="true" ng-click="answerOnClick({{answer.uid}})" ng-repeat="answer in poll.questions[0].answers">{{answer.txtValue}}</ion-checkbox>
+        </div>
+    </ion-content>
+   
+</ion-modal-view>

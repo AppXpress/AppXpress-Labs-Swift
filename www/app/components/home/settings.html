@@ -1,0 +1,29 @@
+<ion-view title="Settings">
+    <!-- header toggle button -->
+    <ion-nav-buttons side="left">
+         <button class="button button-icon button-clear ion-ios-arrow-back ion-android-arrow-back toggle-left" ng-click="$ionicGoBack()"></button>
+    </ion-nav-buttons>
+    <!-- header bar -->
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                General
+            </div>
+            <ion-toggle ng-model="expire" ng-change="pushNotificationChange()">
+                Set Expiry Date
+            </ion-toggle>
+            <div class="item item-divider">
+                Notifications
+            </div>
+            <ion-toggle ng-model="pushNotification.checked" ng-change="pushNotificationChange()">
+                Push Notifications
+            </ion-toggle>
+            
+            <ion-toggle toggle-class="toggle-assertive" ng-model="emailNotification">
+             <!-- ng-true-value="Subscribed" ng-false-value="Unubscribed" -->
+                Newsletter
+            </ion-toggle>
+            
+        </div>
+    </ion-content>
+</ion-view>

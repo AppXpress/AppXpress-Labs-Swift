@@ -1,0 +1,26 @@
+<ion-view title="{{stat_title}}">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-arrow-back ion-android-arrow-back toggle-left" ui-sref="tab.mypolls"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <!-- header toolbar -->
+        <div class="swift-project-header-bar {{breadcrumb_color}} project-table-layout">
+            <div class="swift-project-header-title swift-project-table-cell">{{poll.questions[0].questionText}}
+            </div>
+            <div class="swift-project-table-cell">
+                <a ng-click="goToAnswerGraph()" class="mfb-component__button--main swift-project-breadcrumb-button {{question_graph_btn_color}}">
+                    <!-- ng-class="{{createpoll}} ? '{{breadcrumb_btn_color}}' : 'swift-project-gray-bg'" -->
+                    <i class="mfb-component__main-icon--resting swift-project-breadcrumb-button-icon">1</i>
+                </a>
+                <a ng-click="goToOrganizationGraph()" class="mfb-component__button--main swift-project-breadcrumb-button {{org_graph_btn_color}}">
+                    <!-- ng-class="!{{createpoll}} ? '{{breadcrumb_btn_color}}' : 'swift-project-gray-bg'" -->
+                    <i class="mfb-component__main-icon--resting swift-project-breadcrumb-button-icon">2</i>
+                    <i class="mfb-component__main-icon--active swift-project-breadcrumb-button-icon">2</i>
+                </a>
+            </div>
+        </div>
+        <!-- create poll form pages-->
+        <div ng-include="stat_layout" class="swift-project-fade-animation swift-project-fade-container"></div>
+    </ion-content>
+</ion-view>

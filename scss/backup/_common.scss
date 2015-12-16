@@ -1,0 +1,119 @@
+.pane {
+    background-color: transparent;
+}
+
+.centralize {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+}
+
+.block-inline {
+    display: inline-block;
+}
+
+
+/************* date timer in cards ********************/
+
+.show_poll {
+    display: block !important;
+}
+
+.hide_poll {
+    display: none !important;
+}
+
+.closed_poll_color_text {
+    color: red;
+    font-size: large;
+    font-weight: 500;
+}
+
+.open_poll_color_time {
+    color: #E07600;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.open_poll_color_time_red {
+    color: red;
+    ont-size: larger;
+}
+
+.open_poll_color_time_orange {
+    color: $theme-color-orange;
+    ont-size: larger;
+    font-weight: 500;
+}
+
+.open_poll_color_time_green {
+    color: $theme-color-green;
+    ont-size: larger;
+    font-weight: 500;
+}
+
+.open_poll_color_text,
+.closed_poll_color_date {
+    color: #564F4F;
+}
+
+// .closed-poll-font-color{
+//  .poll-name{
+//      color: white !important;
+//  }
+// }
+.date-feild {
+    width: 30% !important;
+    display: inline-block !important;
+}
+
+.logout {
+    position: absolute !important;
+    right: 0;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#overlay-content-newpoll {
+    ion-content {
+        padding: 16px;
+    }
+}
+
+.switch label .lever {
+    float: right;
+}
+
+.empty-list-label {
+    margin-top: 15px;
+}
+
+.loading-container .loading {
+    background-color: transparent !important;
+}
+
+.spinner {
+    stroke: #0072FF!important;
+    fill: #4E89CE!important;
+}
+
+.spinner svg {
+    width: 40px;
+    height: 40px;
+}
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+    text-align: center;
+    border-color: #d1d3d6;
+    font-size: 16px;
+    color: inherit;
+}

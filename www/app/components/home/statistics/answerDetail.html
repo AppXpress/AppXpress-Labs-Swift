@@ -1,0 +1,33 @@
+
+<ion-view title="Answer Level Detail">
+   <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-share" ng-click="sendFeedback()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-arrow-back ion-android-arrow-back toggle-left" ng-click="$ionicGoBack()"></button>
+    </ion-nav-buttons>  
+    
+    <ion-content>
+    
+   <!--  <div class="swift-project-table-layout {{breadcrumb_color}} swift-project-table-stat-detail">
+        <div class="swift-project-table-cell"> User Name</div>
+        <div class="swift-project-table-cell"> Organization</div>
+        <div class="swift-project-table-cell">Answer</div>
+        <div class="swift-project-table-cell">Time</div>
+    </div> -->
+    <div class="row {{breadcrumb_color}} swift-project-table-stat-detail-header">
+        <div class="col"> User Name</div>
+        <div class="col">Answer</div>
+        <div class="col">OrgId</div>
+    </div>
+     <div class="row swift-project-table-stat-detail" ng-repeat="participant in stat" ng-class-even="'even'">
+        <div class="col swift-project-table-stat-detail-cell">{{participant.username}}</div>
+        <div class="col swift-project-table-stat-detail-cell">{{participant.answer}}</div>
+        <div class="col swift-project-table-stat-detail-cell">{{participant.participantOrgId}}</div>
+    </div>
+    </ion-content>
+    <!-- footer buttons -->
+    <!-- <ion-footer-bar align-title="left" class="swift-project-footer-btn-list swift-project-table-layout">
+        <div ng-include="newpoll_footer_buttons" class="swift-project-table-layout"></div>
+    </ion-footer-bar> -->
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view class="overlay" hide-nav-bar="true">
+    <div id="modal" class="modal card-model">
+        <a class="btn-floating btn-small waves-effect waves-light gray close-btn" ng-click="closePoll()"> <i class="mdi-navigation-close"></i></a>
+        <div id="model-header" class="model-header model-header-background-orange">
+            <div class="question">
+                {{poll.questions[0].questionText}}
+            </div>
+            <div class="closing-date">
+                <div class="colum1">closed on</div>
+                <div class="colum2">{{poll.endDate}}</div>
+            </div>
+        </div>
+        <a class="btn-floating btn-large waves-effect waves-light orange md-next-poll" ng-click="gotoOrganizations()"><i class="mdi-navigation-chevron-right"></i></a>
+        <a class="btn-floating btn-large waves-effect waves-light green md-save-poll" ng-click="savePoll()"><i class="mdi-content-save"></i></a>
+        <div id="overlay-content-newpoll" class="overlay-content">
+            <ion-content>
+                <ion-list class="answer-list">
+                    <ion-item ng-repeat="answer in poll.question.answers" class="answer-radio-row">
+                        <p><i class="mdi-image-grain"></i>&nbsp; &nbsp; &nbsp;{{answer.txtValue}}</p>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </div>
+    </div>
+</ion-view>

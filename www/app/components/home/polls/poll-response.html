@@ -1,0 +1,35 @@
+<!-- <ion-item>
+    <div class="swift-card">
+        <div class="swift-color-indicator swift-color-indicator-{{poll.status}}"></div>
+        <div class="item item-text-wrap swift-question">
+            {{poll.questions[0].questionText}}
+        </div>
+        
+    </div>
+    <ion-option-button class="button-assertive" ng-click="edit(item)">
+            Edit
+        </ion-option-button>
+        <ion-option-button class="button-calm" ng-click="share(item)">
+            Share
+        </ion-option-button>
+</ion-item> -->
+<div class="card swift-project-table-layout swift-card" ng-click="direct({poll:poll})">
+    <!-- <div class="swift-color-indicator swift-color-indicator-{{poll.viewStatus}} swift-project-table-cell"></div>
+        <div class="item item-text-wrap swift-question swift-project-table-cell">
+            {{poll.questions[0].questionText}}
+        </div> -->
+    <div class="swift-color-indicator-mypoll swift-color-indicator-{{poll.viewStatus}}"></div>
+    <div class="item item-text-wrap swift-question swift-project-table-cell">
+        {{poll.questions[0].questionText}}
+    </div>
+    <div class=" swift-project-table-cell swift-project-card-right-section">
+        <div ng-if="!previous" class="swift-project-time-duration swift-project-time-label"> Expires in</div>
+        <div ng-if="previous" class="swift-project-time-duration swift-project-time-label-expired"> Expired</div>
+        <div ng-if="!previous" class="swift-project-days-diff swift-project-time-label">{{daysDifference}}</div>
+        <div ng-if="previous" class="swift-project-days-diff swift-project-time-label-expired">{{daysDifference}}</div>
+
+        <!--  <canvas id="pie" class="chart chart-pie" chart-data="poll.questions[0].answerCountValue" chart-labels="poll.questions[0].answerLabel">
+        </canvas> -->
+        <!--   </div> -->
+    </div>
+</div>

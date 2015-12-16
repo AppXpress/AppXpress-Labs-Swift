@@ -1,0 +1,62 @@
+.card-item,
+.poll-name,
+.poll-detail,
+.poll-detail-statistics {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card-item {
+    background-color: $card-background;
+    box-sizing: border-box;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 8px 0;
+    //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    .poll-name {
+        @extend .md-content-wrap;
+        width: 54%;
+        color: $body-font-color;
+        text-align: left;
+        overflow: hidden !important;
+        max-height: 120px;
+        padding: 16px 16px;
+        float: left;
+        div {
+            @extend .centralize;
+        }
+    }
+    .poll-detail {
+        background-color: #E8E8E8;
+        float: right;
+        min-width: 30%;
+        min-height: 130px;
+        position: relative;
+        div {
+            @extend .centralize;
+            text-align: center;
+            padding: 8px;
+        }
+    }
+    .poll-detail-statistics {
+        background-color: #E8E8E8;
+        float: right;
+        min-height: 130px;
+        width: 130px;
+        position: relative;
+    }
+    .indicating-layer {
+        width: 30px;
+        display: inline-block;
+        float: left;
+        background-color: red;
+        min-height: 130px;
+    }
+}

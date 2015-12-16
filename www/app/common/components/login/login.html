@@ -1,0 +1,27 @@
+<ion-view hide-nav-bar="true" class="swift-project-login-background ">
+    <ion-content scroll='false'>
+        <div class="list swift-project-input-custom">
+            <div class="swift-project-name">SWIFT <span class="swift-project-label-questioner">Q<span class="swift-project-ampersand">&</span>A</span></div><!-- {{PROJECT_NAME | translate}} -->
+            <div class="swift-project-loginform">
+                <label class="item item-input input-custom username-border">
+                    <input type="text" name="user.username" placeholder="Username" ng-model="user.username">
+                </label>
+                <label class="item item-input input-custom password-border">
+                    <input type="password" name="user.password" placeholder="Password" ng-model="user.password">
+                </label>
+            </div>
+            <div ng-show="loginError" style="color:#ff2923;text-align: center;">{{errorMessage}}</div>
+            <br> <a class="button swift-project-custom-button button-block button-clear" ng-click="login()"> Sign-In </a>
+            <div class="swift-project-footer">
+            <div class="swift-project-version"> 
+                0.1 Beta</div>
+            <div class="row">
+                <div class="col">
+                    <h2 style="" id="erlenmeyer-icon"><i class="ion-erlenmeyer-flask"></i></h2>
+                    <div style="">AppXpress Labs</div>
+                </div>
+            </div>
+            </div>
+            
+    </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+{
+	"PROJECT_NAME":"SWIFT Q&A",
+	"ANSWERED":"Answered",
+	"MYPOLLS":"MyPolls",
+	"MISSED":"Missed",
+	"DRAFTS":"Drafts",
+
+	"CREATE_NEW_POLL":"Create a new poll",
+	"QUESTION" : "Question",
+	"ANSWER" : "Answers",
+	"OPTIONS_ALLOWED" : "More than one options allowed"
+}

@@ -1,0 +1,34 @@
+<ion-view view-title="My Polls">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon toggle-left" ng-click="openSideMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <div ng-repeat="poll in createdPollsui">
+                <div class="card swift-project-table-layout swift-card" ng-if="poll.viewStatus === 'active'" ng-click="showActionsheet(poll)">
+                    <div class="swift-color-indicator-mypoll swift-color-indicator-{{poll.viewStatus}}"></div>
+                    <div class="item item-text-wrap swift-question swift-project-table-cell">
+                        {{poll.questions[0].questionText}}
+                    </div>
+                    <div class=" swift-project-table-cell swift-project-card-right-section">
+                        <div ng-if="(poll.questions[0].totalNumofAnswers == 0) ? false : true" data-ac-chart="'pie'" data-ac-data="poll.questions[0].answerDataList" class="swift-project-chart">
+                        </div>
+                        <div class="swift-project-no-statistics" ng-if="(poll.questions[0].totalNumofAnswers == 0) ? true : false">No Statistics</div>
+                        <!--  <canvas id="pie" class="chart chart-pie" chart-data="poll.questions[0].answerCountValue" chart-labels="poll.questions[0].answerLabel">
+        </canvas> -->
+                        <!--   </div> -->
+                    </div>
+                </div>
+                <!--   <div ng-if="poll.viewStatus === 'inactive'" class="card swift-project-table-layout swift-card" ng-click="showActionsheetDrafts(poll)">
+                    <div class="swift-color-indicator swift-color-indicator-{{poll.viewStatus}} swift-project-table-cell"></div>
+                    <div class="item item-text-wrap swift-question swift-project-table-cell">
+                        {{poll.questions[0].questionText}}
+                    </div>
+                </div> -->
+                <cardview ng-if="poll.viewStatus === 'inactive'" direct="showActionsheetDrafts(poll)" poll="poll"></cardview>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

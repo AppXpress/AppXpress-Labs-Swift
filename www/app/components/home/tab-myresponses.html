@@ -1,0 +1,15 @@
+<ion-view view-title="My Responses">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon toggle-left" ng-click="openSideMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()" >
+        </ion-refresher>
+        <ion-list>
+            <div ng-repeat="poll in assignedPollsui">
+                <cardview poll="poll" direct="(poll.viewStatus === 'shared') ? openSharedpollModal(poll) : openAnsweredModal(poll)"></cardview>
+                <!-- direct="(poll.viewStatus === 'shared') ? openSharedpollModal(poll) : openAnsweredModal(poll)" -->
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

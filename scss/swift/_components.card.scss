@@ -1,0 +1,48 @@
+.#{$namespace}card {
+    width: 100%;
+}
+.#{$namespace}question {
+    width: 100%;
+    border-color: transparent;
+}
+.#{$namespace}color-indicator {
+    width: 20px;
+    height: 130px;
+}
+.#{$namespace}color-indicator-mypoll {
+    width: 20px;
+    height: 130px;
+}
+.#{$namespace}color-indicator-active, .#{$namespace}color-indicator-answered {
+    background-color: $theme-color-green;
+}
+.#{$namespace}color-indicator-draft, .#{$namespace}color-indicator-inactive,.#{$namespace}color-indicator-shared {
+    background-color: $theme-color-orange;
+}
+.#{$namespace}color-indicator-missed {
+    background-color: $theme-color-red;
+}
+
+.item-content{
+    padding:0 !important;
+}
+.#{$namespace}project-card-right-section{
+	background-color:#f8f8f8;
+}
+.#{$namespace}project-time-duration{
+    width: 130px;
+    text-align: center;
+    font-size: larger;
+}
+.#{$namespace}project-time-label{
+    color: $theme-color-green;
+}
+.#{$namespace}project-time-label-expired{
+    color: $theme-color-red;
+}
+.#{$namespace}project-days-diff{
+    font-size: larger;
+    text-align: center;
+    font-weight: 700;
+    line-height: 30px;
+}

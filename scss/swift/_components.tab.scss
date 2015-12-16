@@ -1,0 +1,10 @@
+.#{$namespace}project-tabs-color-active-positive {
+    .tab-item {
+        color: #F8F8F8;
+    }
+    .tab-item.activated,
+    .tab-item.active,
+    .tab-item.tab-item-active {
+        color: #fff;
+    }
+}

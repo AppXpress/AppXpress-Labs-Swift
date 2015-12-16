@@ -1,0 +1,450 @@
+.#{$namespace}project-footer {
+    bottom: 5%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  WRAPPER OBJECT
+  
+----------------------------------------------------------------------------- */
+
+ion-content {
+    //height: 100% !important;
+    .scroll {
+        height: 100%;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  FOOTER OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-footer {
+    .#{$namespace}project-version {
+        font-size: 0.9em;
+        color: $font-color;
+        margin-top: 2em;
+    }
+    .row {
+        .col {
+            h2 {
+                color: $font-color;
+            }
+        }
+        div {
+            font-size: 0.9em;
+            color: $font-color;
+        }
+    }
+}
+
+.#{$namespace}project-footer-btn-list {
+    padding: 0;
+}
+
+.#{$namespace}project-footer-btn {
+    .button {
+        width: 100%;
+        min-height: 44px !important;
+        color: $font-color;
+        font-size: $font-size--smedium;
+    }
+}
+
+.#{$namespace}project-save-btn {
+    width: 50%;
+    .button {
+        background-color: $theme-color-green;
+    }
+}
+
+.#{$namespace}project-next-btn {
+    width: 50%;
+    .button {
+        background-color: $theme-color-lightamber;
+    }
+}
+
+.#{$namespace}project-submit-btn {
+    width: 50%;
+    .button {
+        background-color: $theme-color-lightblue;
+    }
+}
+
+.#{$namespace}project-send-answer-btn {
+    bottom: 0;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  FLOATING BUTTON OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-new-poll-icon {
+    margin-top: 18px;
+}
+
+.#{$namespace}project-new-poll-icon-small {
+    margin-top: 7px;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  BACKGROUND OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-blue-bg {
+    background-color: $theme-header-color-blue;
+    color: $font-color;
+}
+
+.#{$namespace}project-blue-bg {
+    .tabs,
+    .swift-menu,
+    .bar {
+        background-color: $theme-header-color-blue;
+    }
+}
+
+.#{$namespace}project-amber-bg {
+    background-color: $theme-color-dark-yellow !important;
+    color: $font-color;
+}
+
+.#{$namespace}project-amber-bg {
+    .tabs,
+    .swift-menu,
+    .bar {
+        background-color: $theme-color-dark-yellow;
+    }
+}
+
+.#{$namespace}project-dark-teal-bg {
+    background-color: $theme-color-dark-teal !important;
+    color: $font-color;
+}
+
+.#{$namespace}project-dark-teal-bg {
+    .tabs,
+    .swift-menu,
+    .bar {
+        background-color: $theme-color-dark-teal;
+    }
+}
+
+.#{$namespace}project-deeporange-bg {
+    background-color: $theme-color-deeporange;
+    color: $font-color;
+}
+
+.#{$namespace}project-deeporange-bg {
+    .tabs,
+    .swift-menu,
+    .bar {
+        background-color: $theme-color-deeporange;
+    }
+}
+
+.#{$namespace}project-light-blue-bg {
+    background-color: $theme-color-lightblue;
+}
+
+.#{$namespace}project-light-amber-bg {
+    background-color: $theme-color-lightamber;
+}
+
+.#{$namespace}project-light-teal-bg {
+    background-color: $theme-color-teal;
+}
+
+.#{$namespace}project-green-bg {
+    background-color: $theme-color-green !important;
+}
+
+.#{$namespace}project-gray-bg {
+    background-color: $theme-color-gray !important;
+}
+
+.#{$namespace}project-orange-bg {
+    background-color: $theme-color-orange !important;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  LOGIN PAGE BODY OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-login-background {
+    background: #799e5a;
+    background: -moz-linear-gradient(top, #799e5a 0%, #eda932 27%, #eda932 39%, #d6cd27 57%, #d6cd27 70%, #547511 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #799e5a), color-stop(27%, #eda932), color-stop(39%, #eda932), color-stop(57%, #d6cd27), color-stop(70%, #d6cd27), color-stop(100%, #547511));
+    background: -webkit-linear-gradient(top, #799e5a 0%, #eda932 27%, #eda932 39%, #d6cd27 57%, #d6cd27 70%, #547511 100%);
+    background: -o-linear-gradient(top, #799e5a 0%, #eda932 27%, #eda932 39%, #d6cd27 57%, #d6cd27 70%, #547511 100%);
+    background: -ms-linear-gradient(top, #799e5a 0%, #eda932 27%, #eda932 39%, #d6cd27 57%, #d6cd27 70%, #547511 100%);
+    background: linear-gradient(to bottom, #799e5a 0%, #eda932 27%, #eda932 39%, #d6cd27 57%, #d6cd27 70%, #547511 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#799e5a', endColorstr='#547511', GradientType=0);
+    //     background: #f7a934;
+}
+
+.#{$namespace}project-input-custom {
+    height: 100%;
+}
+
+.#{$namespace}project-loginform {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
+
+.#{$namespace}project-name {
+    color: $font-color;
+    text-align: center;
+    padding: 20% 5%;
+    font-size: $font-size--xlarge;
+    letter-spacing: 10px;
+}
+
+.#{$namespace}project-label-questioner {
+    letter-spacing: 2px;
+}
+
+.#{$namespace}project-ampersand {
+    font-size: $font-size--large;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  TABLE LAYOUT OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-table-layout {
+    display: table !important;
+    width: 100%;
+}
+
+.#{$namespace}project-table-cell {
+    display: table-cell !important;
+    vertical-align: middle;
+}
+
+.#{$namespace}project-table-stat-detail-header {
+    padding: 2% 16px;
+    text-align: center;
+    color: $font-color;
+}
+
+.#{$namespace}project-table-stat-detail {
+    padding: 0 16px;
+    text-align: center;
+}
+
+.#{$namespace}project-table-stat-detail-cell {
+    padding: 10px 3px;
+}
+.odd {
+  background-color: #f8f8f8;
+}
+.even {
+  background-color: #f8f8f8;
+}
+
+/* -----------------------------------------------------------------------------
+
+  QUESTIONER FORM LAYOUT OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-newpoll-section-header,
+.#{$namespace}project-newpoll-answers {
+    width: 100%;
+}
+
+.#{$namespace}project-newpoll-section-header {
+    padding-top: 16px;
+    color: #444;
+    font-weight: 700;
+    font-size: $font-size--smedium;
+}
+
+.#{$namespace}project-newpoll-answers {
+    padding: 10px 0 10px 10px;
+}
+
+.#{$namespace}project-answer-add-button,
+.#{$namespace}project-answer-remove-button {
+    float: right;
+    height: 33px !important;
+    width: 33px !important;
+    margin: 0 9px;
+}
+
+.#{$namespace}project-answer-add-button {
+    background-color: $theme-color-green !important;
+}
+
+.#{$namespace}project-input-label {
+    font-size: 14px;
+}
+
+.#{$namespace}project-item-input {
+    padding: 0;
+}
+
+.#{$namespace}project-answer-feild {
+    height: 23px !important;
+}
+
+.#{$namespace}project-date-feild {
+    border: 1px solid #ddd !important;
+    text-align: center;
+    padding: 5px;
+    margin: 0 10px !important;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  ORGANIZATION LIST LAYOUT OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-party-item {
+    border-color: transparent !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    padding: 5px 16px 5px 60px;
+}
+
+.#{$namespace}project-party-list {
+    padding: 0 0 0 10px;
+}
+
+.#{$namespace}project-org-type {
+    margin-bottom: 10px;
+    label,
+    label select {
+        font-weight: 700;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  CHART LAYOUT OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.#{$namespace}project-chart {
+    height: 130px;
+    width: 130px;
+    padding-left: 20px;
+}
+
+.#{$namespace}project-no-statistics {
+    color: #28a54c;
+    font-weight: 600;
+    font-size: large;
+    text-align: center;
+    width: 130px;
+}
+
+.#{$namespace}project-main-chart {
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    @media (min-device-width: 768px) and (max-device-width: 1024px) {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+.#{$namespace}project-color-circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: red;
+}
+
+.#{$namespace}project-chart-legend {
+    padding-left: 10px;
+    line-height: 25px;
+}
+
+.#{$namespace}project-answer-count {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.#{$namespace}project-total-answer-label {
+    font-weight: 600;
+    line-height: 35px;
+    text-align: right;
+    color: #444;
+    font-size: $font-size--smedium;
+    padding-right: 20px;
+    @media (min-device-width: 768px) and (max-device-width: 1024px) {
+        padding-right: 50px;
+    }
+}
+
+.#{$namespace}project-total-answer-count {
+    font-size: x-large;
+    color: #2196F3;
+    font-weight: 700;
+}
+
+.#{$namespace}project-poll-expiry-date {
+    font-weight: 500;
+    font-size: medium;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  ACTION SHEET LAYOUT OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.action-sheet-group {
+    display: table;
+    width: 100%;
+}
+
+.action-sheet .button {
+    display: table-cell;
+    width: 50%;
+    padding: 20px;
+}
+
+.#{$namespace}project-archive {
+    color: #C25A5A;
+    font-weight: 600;
+}
+
+.#{$namespace}project-stat {
+    color: #004971;
+    font-weight: 600;
+}
+
+.#{$namespace}project-actionsheet-img {
+    width: 45%;
+}

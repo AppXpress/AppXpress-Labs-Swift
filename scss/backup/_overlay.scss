@@ -1,0 +1,179 @@
+.md-tile-left {
+    width: 25%;
+    margin-right: 0 !important;
+    @extend .displayinline;
+    img {
+        display: block;
+        width: 100%;
+        @media (min-device-width: 800px) and (max-device-width: 1280px) {
+            width: 75%;
+        }
+        padding: 5px;
+    }
+}
+
+.md-tile-content {
+    @extend .displayinline;
+    width: 73%;
+    padding: 0;
+    h3 {
+        font-size: 1.3em !important;
+    }
+}
+
+.overlay {
+    background-color: transparent;
+    z-index: 99;
+}
+
+.model-header-background-blue {
+    background-color: #0277BD;
+}
+
+.model-header-background-orange {
+    background-color: #FF5722;
+}
+
+.model-header-background-green {
+    background-color: #689F38;
+}
+
+// .model-header-background-yellow{
+//     background-color:
+// }
+.model-header-background-pink {
+    background-color: #E91E63;
+}
+
+.modal {
+    /* some styles to position the modal at the center of the page */
+    display: block !important;
+    overflow: visible !important;
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // width: 60%;
+    /* line-height: 200px; */
+    // height: 40%;
+    // margin-left: -30%;
+    // margin-top: -30%;
+    // background-color: #ffffff;
+    // text-align: center;
+    // z-index: 10;
+    //outline: 9999px solid rgba(255, 255, 255, 0.5);
+    // overflow: visible;
+    // min-height: 0;
+}
+
+.model-header {
+    //background-color: #FF5722;
+    font-size: 20px;
+    letter-spacing: .005em;
+    box-sizing: border-box;
+    font-weight: 400;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    color: #D6D6D6;
+    padding: 3%;
+    position: relative;
+}
+
+.card-model {
+    box-shadow: 0 9px 30px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.28);
+    transition: all 0.2s ease-in-out;
+}
+
+.card-model:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.overlay-show {
+    display: block;
+}
+
+.overlay-hide {
+    display: none;
+}
+
+.overlay-content {
+    position: relative;
+    height: 65%;
+    text-align: left;
+    .scroll-content {
+        top: 16px !important;
+    }
+}
+
+#overlay-window,
+#newpoll-summary-overlay,
+.overlay-window-home,
+#overlay-window-answeredpolls,
+#overlay-window-pendingpolls,
+#overlay-window-missedpolls {
+    display: none;
+}
+
+
+/****** answer poll overlay *******/
+
+.close-btn {
+    float: right;
+    bottom: 16px;
+    right: -16px;
+}
+
+.answer-btn {
+    z-index: 9 !important;
+    float: right;
+    
+    top: 30px;
+     @media (min-device-width: 768px) and (max-device-width: 1024px) {
+      top: 70px;
+    }
+}
+
+.closing-date {
+    @extend .block-inline;
+    width: 72%;
+    padding: 5% 0;
+    font-size: medium;
+}
+
+.colum1 {
+    @extend .block-inline;
+     width: 50%;
+     @media (min-device-width: 768px) and (max-device-width: 1024px) {
+        width: 35%;
+    }
+    
+   
+}
+
+.colum2 {
+    @extend .block-inline;
+    width: 43%;
+    
+}
+
+
+.answerd-model {
+    top: 20%;
+    min-height: 30%;
+    height: 30%;
+}
+
+.answerd-model-content {
+    .list {
+        padding: 16px;
+    }
+}
+
+.sharedpoll-model {
+    @media (min-device-width: 360px) and (max-device-width: 768px) {
+        top: 10%;
+        height: 50%;
+        min-height: 80%;
+    }
+}

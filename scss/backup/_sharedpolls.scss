@@ -1,0 +1,32 @@
+// #sharedpolls-content {
+//     top: 44px;
+//      @media (min-device-width: 768px) and (max-device-width: 1024px) {
+//         top: 64px;
+//     }
+// }
+#header-toolbar-sharedpolls,
+#header-toolbar-settings {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23)!important;
+}
+
+.platform-android {
+    #sharedpolls-content,
+    #settings-content {
+        padding: 8px 16px;
+        margin: 44px auto 0;
+        @media (min-device-width: 768px) and (max-device-width: 1024px) {
+            margin: 100px auto 0;
+        }
+    }
+}
+
+.platform-ios {
+    #sharedpolls-content,
+    #settings-content {
+        padding: 8px 16px;
+        margin: 64px auto 0;
+        @media (min-device-width: 768px) and (max-device-width: 1024px) {
+            margin: 100px auto 0;
+        }
+    }
+}

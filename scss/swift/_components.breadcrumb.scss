@@ -1,0 +1,64 @@
+.#{$namespace}project-header-bar {
+    width: 100%;
+    overflow: visible;
+    padding: 16px;
+}
+
+.#{$namespace}project-header-title {
+    width: 66%;
+    color: $font-color;
+        font-size: $font-size--medium;
+    @media (min-device-width: 768px) and (max-device-width: 1024px) {
+        width: 84%;
+        color: $font-color;
+    }
+}
+
+.#{$namespace}project-header-buttons {
+    width: 30%;
+}
+
+.#{$namespace}project-breadcrumb-button {
+    height: 38px !important;
+    width: 38px !important;
+    margin: 0 8px;
+}
+
+.#{$namespace}project-breadcrumb-button-icon {
+    line-height: 38px !important;
+}
+
+.#{$namespace}project-fade-container {
+    padding: 16px;
+}
+
+.#{$namespace}project-fade-animation.ng-enter,
+.#{$namespace}project-fade-animation.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+}
+
+.#{$namespace}project-fade-animation.ng-enter {
+    z-index: 100;
+    opacity: 0;
+}
+
+.#{$namespace}project-fade-animation.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.#{$namespace}project-fade-animation.ng-leave {
+    z-index: 101;
+    opacity: 1;
+}
+
+.#{$namespace}project-fade-animation.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.#{$namespace}project-header-question{
+    color: $font-color;
+    font-size: $font-size--medium;
+} 

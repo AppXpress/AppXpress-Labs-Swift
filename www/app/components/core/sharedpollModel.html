@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header {{header_color}}">
+        <h1 class="title swift-project-header-question">Answer Poll</h1>
+        <button class="button button-clear button-primary" ng-click="sharedpollmodal.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="swift-project-header-bar {{breadcrumb_color}} swift-project-header-question ">{{poll.questions[0].questionText}}
+        </div>
+        <div class="list">
+            <ion-checkbox id="{{answer.uid}}" ng-model="answer.selected" ng-click="answerOnClick({{answer.uid}})" ng-repeat="answer in poll.questions[0].answers">{{answer.txtValue}}</ion-checkbox>
+        </div>
+    </ion-content>
+    <ul id="menu" class="mfb-component--br mfb-zoomin swift-project-send-answer-btn" data-mfb-toggle="hover">
+        <li class="mfb-component__wrap">
+            <a href="#" class="mfb-component__button--main swift-project-green-bg " ng-click="answerPoll
+()">
+                <i class="mfb-component__main-icon--resting ion-checkmark-round swift-project-new-poll-icon"></i>
+                <i class="mfb-component__main-icon--active ion-checkmark-round swift-project-new-poll-icon"></i>
+            </a>
+        </li>
+    </ul>
+</ion-modal-view>
