@@ -88,21 +88,20 @@ function myresponseConroller($rootScope, $scope, $stateParams, $poll, $state, $i
             // return;
             if (status == 201) {
                 // $scope.closeSharedpollModal();
-                //     $pollStore.updateAssignedPollData(function(status, data) {
-                //         $ionicLoading.hide();
+                // $pollStore.updateAssignedPollData(function(status, data) {
+                //     $ionicLoading.hide();
 
-                //     });
-                //     $pollStore.updateUserCreatedPolls(function(status, data) {
-                //        // $ionicLoading.hide();
+                // });
+                // $pollStore.updateUserCreatedPolls(function(status, data) {
+                //     $ionicLoading.hide();
 
-                //     });
+                // });
+
+                //$rootScope.updateMypolls = true;
 
                 $pollStore.updateAssignedPollData(function(status, data) {
-                    //$ionicLoading.hide();
-                    $pollStore.updateUserCreatedPolls(function(status, data) {
-                        $ionicLoading.hide();
-
-                    });
+                    $rootScope.updateUserCreatedPolls = true;
+                    $ionicLoading.hide();
 
                 });
 

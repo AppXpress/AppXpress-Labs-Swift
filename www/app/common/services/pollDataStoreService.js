@@ -256,7 +256,10 @@ angular.module('swift.services')
                     $rootScope.polllist_drafts = [];
                     $rootScope.assignedPolls = [];
                     $rootScope.answersList = [];
+                    
                     callback(true, "no data available");
+
+                    
                     return;
                 }
 

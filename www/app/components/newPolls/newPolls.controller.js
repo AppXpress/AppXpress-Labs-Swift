@@ -7,10 +7,10 @@ angular.module('swift.newpolls')
     .controller('newPollsController', newPollsController);
 
 
-newPollsController.$inject = ['$rootScope', '$scope', '$state', '$stateParams', '$loadingService', '$poll', '$controlBreadcrumb', '$platformService', '$newpollBreadcrumb', '$log', '$popupService', '$pollStore'];
+newPollsController.$inject = ['$rootScope', '$scope', '$state', '$stateParams', '$loadingService', '$poll',  '$platformService', '$log', '$popupService', '$pollStore','$ionicLoading'];
 
 
-function newPollsController($rootScope, $scope, $state, $stateParams, $loadingService, $poll, $controlBreadcrumb, $platformService, $newpollBreadcrumb, $log, $popupService, $pollStore) {
+function newPollsController($rootScope, $scope, $state, $stateParams, $loadingService, $poll,  $platformService, $log, $popupService, $pollStore,$ionicLoading) {
 
     $scope.allPartyList = [];
     $scope.selected = [];
@@ -22,7 +22,7 @@ function newPollsController($rootScope, $scope, $state, $stateParams, $loadingSe
     var newpoll_summary_overlay;
     $scope.newpoll_layout = 'app/components/newPolls/newPollQuestionerForm.html';
     $scope.newpoll_footer_buttons = 'app/components/newPolls/footer/newPollQuestionerFormFooter.html';
-    
+
 
 
     var today = new Date();
@@ -50,7 +50,7 @@ function newPollsController($rootScope, $scope, $state, $stateParams, $loadingSe
     // after enter to the page 
     $scope.$on('$ionicView.afterEnter', function(viewInfo) {
         $scope.question_form_btn_color = $rootScope.breadcrumb_btn_color;
-    $scope.org_form_btn_color = 'swift-project-gray-bg';
+        $scope.org_form_btn_color = 'swift-project-gray-bg';
 
         $scope.uid = $stateParams.pollUid;
         if ($stateParams && $stateParams.pollUid) {
@@ -144,12 +144,16 @@ function newPollsController($rootScope, $scope, $state, $stateParams, $loadingSe
         }
 
         removeEmptyAnswers();
-        $loadingService.show();
+        $ionicLoading.show();
         $poll.createPoll($scope.poll, function(status, data) {
-            $loadingService.hide();
+            //$loadingService.hide();
             if (status == 201) {
                 $popupService.showSuccessMessage('New Poll Created');
-                $pollStore.updateUserCreatedPolls();
+                $rootScope.updateUserCreatedPolls = true;
+                // $pollStore.updateUserCreatedPolls();
+                $pollStore.updateAssignedPollData(function(status, data) {
+                    $ionicLoading.hide();
+                });
                 //$rootScope.refreshData((sharedPoll) ? true : false);
                 //$redirectTo = (sharedPoll) ? 'home.mypolls' : 'home.pending';
                 $state.go('tab.mypolls');
@@ -174,8 +178,6 @@ function newPollsController($rootScope, $scope, $state, $stateParams, $loadingSe
         $scope.newpoll_layout = 'app/components/newPolls/newPollsOrganization.html';
         $scope.newpoll_footer_buttons = 'app/components/newPolls/footer/newPollOrganizationFooter.html';
 
-
-        //$newpollBreadcrumb.activeOrganizationForm("#slider-content");
     }
 
 
@@ -225,7 +227,7 @@ function newPollsController($rootScope, $scope, $state, $stateParams, $loadingSe
         $scope.newpoll_footer_buttons = 'app/components/newPolls/footer/newPollQuestionerFormFooter.html';
 
 
-        //$newpollBreadcrumb.activeQuestionForm("#slider-container");
+       
     }
 
 
@@ -262,12 +264,17 @@ function newPollsController($rootScope, $scope, $state, $stateParams, $loadingSe
     // update poll data
     function updatePollData(shared) {
         removeEmptyAnswers();
-        $loadingService.show();
+        $ionicLoading.show();
         $poll.updatePoll($scope.poll, function(status, data) {
-            $loadingService.hide();
+            //$loadingService.hide();
             if (status == 202) {
                 $popupService.showSuccessMessage('Poll successfully submitted');
-                $pollStore.updateUserCreatedPolls();
+                //$pollStore.updateUserCreatedPolls();
+                $rootScope.updateUserCreatedPolls = true;
+                $pollStore.updateAssignedPollData(function(status, data) {
+                    $ionicLoading.hide();
+
+                });
                 //$redirectTo = (shared) ? 'home.mypolls' : 'home.pending';
                 $state.go('tab.mypolls');
                 return;

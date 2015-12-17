@@ -59,4 +59,5 @@
     <plugin name="de.appplant.cordova.plugin.email-composer" spec="https://github.com/katzer/cordova-plugin-email-composer.git" />
     <plugin name="com.phonegap.plugins.PushPlugin" spec="https://github.com/phonegap-build/PushPlugin.git" />
     <plugin name="org.apache.cordova.device" spec="~0.3.0" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
 </widget>

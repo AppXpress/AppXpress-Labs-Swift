@@ -26,23 +26,16 @@ function homeConfigurations($stateProvider) {
     })
 
     .state('tab.myresponses', {
-            url: '/myresponses',
-            views: {
-                'tab-myresponses': {
-                    templateUrl: 'app/components/home/tab-myresponses.html',
-                    controller: 'myresponseConroller'
-                }
+        url: '/myresponses',
+        views: {
+            'tab-myresponses': {
+                templateUrl: 'app/components/home/tab-myresponses.html',
+                controller: 'myresponseConroller'
             }
-        })
-        .state('tab.chat-detail', {
-            url: '/myresponses/:chatId',
-            views: {
-                'tab-myresponses': {
-                    templateUrl: 'app/components/home/chat-detail.html'
-                }
-            }
-        })
-        //  poll statistics state
+        }
+    })
+
+    //  poll statistics state
 
     .state('statistics', {
         url: "/statistics",
@@ -54,35 +47,16 @@ function homeConfigurations($stateProvider) {
         controller: "statisticsConroller"
     })
 
-    .state('settings', {
-            url: "/settings",
-            templateUrl: "app/components/home/settings.html"
-        })
-        .state('disclaimer', {
-            url: "/disclaimer",
-            templateUrl: "app/components/home/disclaimer.html"
-        })
-        .state('help', {
-            url: "/help",
-            templateUrl: "app/components/home/help.html"
-        })
-        .state('feedback', {
-            url: "/feedback",
-            templateUrl: "app/components/home/feedback.html"
-        })
-        .state('thankyou', {
-            url: "/thankyou",
-            templateUrl: "app/components/home/thankyou.html"
-        })
-        .state('detail', {
-            url: "/detail",
-            params: {
-                answer: null
-            },
-            cash: false,
-            templateUrl: "app/components/home/statistics/answerDetail.html",
-            controller: "statisticsDetailController"
-        })
+
+    .state('detail', {
+        url: "/detail",
+        params: {
+            answer: null
+        },
+        cash: false,
+        templateUrl: "app/components/home/statistics/answerDetail.html",
+        controller: "statisticsDetailController"
+    })
 
 
     // })

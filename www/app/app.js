@@ -8,7 +8,7 @@
 // 'swift.controllers' is found in controllers.js
 
 // angular.module('swift', [ 'ionic', 'swift.controllers','chart.js','swift.services', 'swift.directives','pascalprecht.translate','swift.core','swift.login', 'swift.home','swift.sharedpolls','ab-base64','swift.newpolls','swift.settings'])
-angular.module('swift', [ 'ionic', 'pascalprecht.translate','angularCharts',"ngSanitize", "ngCordova",'swift.directives','swift.core','swift.services','swift.login','swift.home','swift.directives','swift.newpolls'])
+angular.module('swift', [ 'ionic', 'pascalprecht.translate','angularCharts',"ngSanitize", "ngCordova",'swift.directives','swift.core','swift.services','swift.login','swift.home','swift.newpolls','swift.menu'])
 
 .run(function($ionicPlatform, $translate) {
 	$ionicPlatform.ready(function() {

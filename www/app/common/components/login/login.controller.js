@@ -16,19 +16,19 @@ function loginController($rootScope, $scope, $state, $authentication, $swiftConf
     //        password: "newUser098"
     //    }
 
-    $scope.user = {
-        username: "saliyaappxpressapi",
-        password: "TestingApp4765"
-    }
+    // $scope.user = {
+    //     username: "saliyaappxpressapi",
+    //     password: "TestingApp4765"
+    // }
 
     // $scope.user = {
     //     username: "sumali",
     //     password: "sumali123"
     // }
-    //  $scope.user = {
-    //     username: "",
-    //     password: ""
-    // }
+     $scope.user = {
+        username: "",
+        password: ""
+    }
 
     // User Login Fuction
     $scope.login = function() {

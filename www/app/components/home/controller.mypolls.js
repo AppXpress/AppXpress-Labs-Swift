@@ -13,7 +13,7 @@ function mypollConroller($rootScope, $scope, $stateParams, $poll, $state, $ionic
         maskId: '#swift-mask'
     });
 
-    $scope.config = {
+    $scope.chart_config = {
         title: '',
         tooltips: true,
         labels: false,
@@ -25,15 +25,22 @@ function mypollConroller($rootScope, $scope, $stateParams, $poll, $state, $ionic
             //could be 'left, right'
             position: 'right'
         },
-        colors: ["#F44336", "#4CAF50", "#03A9F4", "#FFC107", "#FFFF00", "#536DFE", "#673AB7", "#795548", "#FF9800"]
-            // colors: ["#F44336", "#4CAF50", "#03A9F4", "#FFC107", "#FFFF00","#536DFE","#673AB7","#795548","#FF9800"]
-
+        colors: $rootScope.colors
     };
     $rootScope.test = function(state) {
         console.log(state);
     }
+    $scope.$on('$ionicView.afterEnter', function(viewInfo) {
+        if ($rootScope.updateUserCreatedPolls) {
+            $ionicLoading.show();
+            $pollStore.updateUserCreatedPolls(function(status, data) {
+                $ionicLoading.hide();
+                $rootScope.updateUserCreatedPolls = false;
 
+            });
+        }
 
+    });
     // Triggered on a button click, or some other target
     $scope.showActionsheet = function(poll) {
         if (poll.questions[0].totalNumofAnswers > 0) {
@@ -79,7 +86,7 @@ function mypollConroller($rootScope, $scope, $stateParams, $poll, $state, $ionic
                                         $ionicLoading.hide();
 
                                     });
-                                    
+
                                     return true;
                                 }
                                 $ionicLoading.hide();
@@ -155,11 +162,11 @@ function mypollConroller($rootScope, $scope, $stateParams, $poll, $state, $ionic
 
     };
 
-      $scope.doRefresh = function(){
-        $pollStore.updateUserCreatedPolls(function(status, data){
+    $scope.doRefresh = function() {
+        $pollStore.updateUserCreatedPolls(function(status, data) {
             $scope.$broadcast('scroll.refreshComplete');
         });
-        
+
     }
     $scope.pollStat = function(data) {
         console.log(data);

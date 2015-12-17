@@ -1,3 +1,9 @@
+/**
+ *  controlAppThemeColor Service
+ *  @author: Sumali Jayasinghe
+ *  Service to control the application theme 
+ */
+
 angular.module('swift.services')
     .factory('$controlAppThemeColor', controlAppThemeColor);
 
@@ -26,23 +32,6 @@ function controlAppThemeColor($rootScope, $state) {
     var callback = function(event, toState, toParams, fromState, fromParams) {
         console.log(toState);
         changePageHeaderToolbarColor(toState.name);
-        // var homeState = $state.includes("home.*");
-        // var add_poll_btn = angular.element('#add-poll-btn');
-
-        //change the color of header depends on the state
-        // if (homeState) {
-        //     changePageHeaderToolbarColor(toState.name);
-        // } else {
-        //     changePageHeaderToolbarColor(fromState.name);
-        // }
-
-
-        // show/hide the floating button
-        // if (toState.name == "login" || toState.name == 'newpolls' || toState.name == 'statistics') {
-        //     add_poll_btn.css('display', 'none');
-        // } else {
-        //     add_poll_btn.css('display', 'block');
-        // }
 
         //store the state detail - stateObj
         stateObj = {
@@ -86,7 +75,7 @@ function controlAppThemeColor($rootScope, $state) {
             case "tab.mypolls":
                 $rootScope.header_color = "swift-project-blue-bg";
                 $rootScope.menubar_color = "swift-project-blue-bg";
-                $rootScope.tabbar_color= "swift-project-blue-bg";
+                $rootScope.tabbar_color = "swift-project-blue-bg";
                 $rootScope.breadcrumb_color = "swift-project-light-blue-bg";
                 $rootScope.breadcrumb_btn_color = "swift-project-amber-bg";
 
@@ -97,8 +86,8 @@ function controlAppThemeColor($rootScope, $state) {
             case "tab.myresponses":
                 $rootScope.header_color = "swift-project-dark-teal-bg";
                 $rootScope.menubar_color = "swift-project-dark-teal-bg";
-                $rootScope.tabbar_color= "swift-project-dark-teal-bg";
-                $rootScope.breadcrumb_color= "swift-project-light-teal-bg";
+                $rootScope.tabbar_color = "swift-project-dark-teal-bg";
+                $rootScope.breadcrumb_color = "swift-project-light-teal-bg";
                 $rootScope.breadcrumb_btn_color = "swift-project-amber-bg";
 
                 break;

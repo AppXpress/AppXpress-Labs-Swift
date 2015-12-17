@@ -13,7 +13,7 @@
                         {{poll.questions[0].questionText}}
                     </div>
                     <div class=" swift-project-table-cell swift-project-card-right-section">
-                        <div ng-if="(poll.questions[0].totalNumofAnswers == 0) ? false : true" data-ac-chart="'pie'" data-ac-data="poll.questions[0].answerDataList" class="swift-project-chart">
+                        <div ng-if="(poll.questions[0].totalNumofAnswers == 0) ? false : true" data-ac-chart="'pie'" data-ac-data="poll.questions[0].answerDataList" class="swift-project-chart" data-ac-config="chart_config">
                         </div>
                         <div class="swift-project-no-statistics" ng-if="(poll.questions[0].totalNumofAnswers == 0) ? true : false">No Statistics</div>
                         <!--  <canvas id="pie" class="chart chart-pie" chart-data="poll.questions[0].answerCountValue" chart-labels="poll.questions[0].answerLabel">

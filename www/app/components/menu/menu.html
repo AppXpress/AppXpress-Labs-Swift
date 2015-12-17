@@ -1,0 +1,18 @@
+<div id="o-wrapper" class="o-wrapper">
+</div>
+<div id="swift-menu--slide-{{side}}" class="swift-menu swift-menu--slide-{{side}}">
+    <!-- <div class="bar bar-header bar-stable swift-menu-header">
+    <h1 class="title">Menu List</h1>
+</div> -->
+   <div class="item item-avatar" style="padding-top: 30px">
+    <img src="img/user-icon.png" style="top: 30px;">
+    <h2 id="username" style="font-weight: 700;">{{username}}</h2>
+    <p ng-click="logout()">Logout</p>
+  </div>
+    <ion-list class="swift-menu__items">
+        <ion-item class="swift-menu__item item-icon-left" ng-repeat="item in menulist" ng-click="direct({state:item.goTo,url:item.url})">
+            <i class="icon {{item.icon}}"></i><a class="swift-menu__link">{{item.name}}</a></ion-item>
+    </ion-list>
+</div>
+<div id="swift-mask" class="swift-mask"></div>
+<!-- /swift-mask -->
