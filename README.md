@@ -9,4 +9,4 @@ If you'd like to know more info on Swift, Please visit [http://appxpresslabs.com
 #### Licence
 ---
 
-- See the [LICENSE](blob/master/LICENSE) file for license rights and limitations (MIT).
+- See the [LICENSE](../../blob/master/LICENSE) file for license rights and limitations (MIT).
